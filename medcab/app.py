@@ -21,7 +21,7 @@ def create_app():
 
     @app.before_first_request
     def create_all():
-        db.create_all
+        db.create_all()
        
     
     @app.route('/')
@@ -66,11 +66,9 @@ def create_app():
     def logout():
         logout_user()
         return redirect('/')
-
+    
+    @app.route('/recomendations')
+    def recomendations():
+        return f'"TODO FOR TOMORROW"'
+    
     return app
-
-
-
-
-
-
